@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="JOSEPH">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK Joyas| Elegancia y Artesanía (Página Única)</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de Lucide Icons (para iconos elegantes) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Script de configuración de colores y tipografía de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-grey-bg': '#F5F5F7', // Color de fondo principal (Gris muy claro/blanco)
+                        'slate-dark': '#1F2937',    // Color texto/oscuro (Gris oscuro, casi negro)
+                        'silver-bright': '#B4B4B8', // Acento de Plata Pulida (Gris claro brillante)
+                        'navy-elegant': '#0A1C40',  // Acento Primario (Azul Marino Oscuro para Contraste y Lujo)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Georgia', 'Times New Roman', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilo base para el scroll y el fondo general */
+        body {
+            background-color: #F5F5F7; /* light-grey-bg */
+            font-family: 'Inter', sans-serif;
+            color: #1F2937; /* slate-dark */
+        }
+        .icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /* Habilitar desplazamiento suave al hacer clic en los enlaces */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Estilo para los inputs para que tengan un borde elegante */
+        .form-input-custom {
+            border-color: #1F2937; /* slate-dark */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .form-input-custom:focus {
+            border-color: #0A1C40; /* navy-elegant on focus */
+            box-shadow: 0 0 0 3px rgba(10, 28, 64, 0.3); /* Sombra suave navy */
+        }
+        /* Clase para el fondo sutil de la sección Nosotros */
+        .textured-bg {
+            background-color: #F5F5F7;
+            background-image: radial-gradient(rgba(10, 28, 64, 0.05) 1px, transparent 0); /* Usar navy-elegant para el patrón sutil */
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="bg-light-grey-bg/90 shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#inicio" class="text-2xl font-serif font-bold text-navy-elegant hover:text-slate-dark transition duration-300">
+                JK Joyas
+            </a>
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <!-- ENLACES DE ANCLAJE -->
+                <a href="#inicio" class="hover:text-navy-elegant transition duration-300 font-semibold text-slate-dark">Inicio</a>
+                <a href="#coleccion" class="hover:text-navy-elegant transition duration-300">Colección</a>
+                <a href="#nosotros" class="hover:text-navy-elegant transition duration-300">Nosotros</a>
+                <a href="#contacto" class="hover:text-navy-elegant transition duration-300">Contacto</a>
+            </nav>
+            <button class="md:hidden p-2 rounded-lg text-slate-dark hover:bg-light-grey-bg">
+                <i data-lucide="menu" class="icon w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- ====================================== 1. SECCIÓN INICIO (HERO) ====================================== -->
+        <section id="inicio" class="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-40 bg-light-grey-bg min-h-[80vh] flex items-center justify-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4 text-navy-elegant">
+                    Elegancia que Perdura 
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-700">
+                    Descubre la artesanía inigualable en cada pieza de plata. Diseños exclusivos forjados para celebrar tus momentos más preciados.
+                </p>
+                <a href="#coleccion" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-light-grey-bg bg-navy-elegant hover:bg-silver-bright hover:text-slate-dark transition duration-300 shadow-xl transform hover:scale-105">
+                    Explora la Colección
+                </a>
+            </div>
+        </section>
+
+        <!-- ====================================== 2. SECCIÓN COLECCIÓN ====================================== -->
+        <section id="coleccion" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-center mb-6 text-navy-elegant">
+                Colección Completa
+            </h1>
+            <p class="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">
+                Una selección inigualable de arte en Plata 925 y metales preciosos, forjados para trascender el tiempo.
+            </p>
+
+            <!-- GRID DE GALERÍA -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+                
+                <!-- Item 1: Anillo Sello Plata -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/descarga (1).jpg"
+                        onerror="this.src='https://placehold.co/400x400/E5E7EB/1F2937?text=Anillo+Sello+Plata'" 
+                        alt="Anillo Sello Plata"
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Anillo de novia con topacio azul y circonitas</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Cuarzo</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Collar Perla -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/descarga.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/B4B4B8/F5F5F7?text=Collar+Perla'" 
+                        alt="Collar Perla" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Collar Perla Clásica</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Perla Akoya</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Aretes Esmeralda (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/descarga (2).jpg" 
+                        onerror="this.src='https://placehold.co/400x400/1F2937/F5F5F7?text=Aretes+Esmeralda'" 
+                        alt="Aretes Esmeralda" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Anillos de Bodas</p>
+                        <p class="text-gray-500 text-sm">Plata Rodiada | Esmeralda</p>
+                    </div>
+                </div>
+                
+                <!-- Item 4: Pulsera Diamante (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/descarga (3).jpg" 
+                        onerror="this.src='https://placehold.co/400x400/F5F5F7/B4B4B8?text=Pulsera+Diamante'" 
+                        alt="Pulsera Diamante" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Pulsera Eternidad</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Micro Circones</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Pendientes Topacio (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/Anillo Imperial Verde Esmeralda-Anillo de Compromiso _ Mucha Plata M√©xico.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/B4B4B8/1F2937?text=Pendiente+Topacio'" 
+                        alt="Pendientes Topacio" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Pendientes Cielo Azul</p>
+                        <p class="text-gray-500 text-sm">Plata Rodiada | Topacio Azul</p>
+                    </div>
+                </div>
+
+                <!-- Item 6: Anillo Rubí (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/Pear Shaped Ruby Engagement Ring Nature Inspired Vintage Bridal Ring 14K White Gold.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/1F2937/F5F5F7?text=Anillo+Rubi'" 
+                        alt="Anillo Rubí" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Anillo Fuego Rubí</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Rubí de Laboratorio</p>
+                    </div>
+                </div>
+
+                <!-- Item 7: Brazalete Serpiente (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/Braçadeira Boêmia Feminina, Punho de Braço, Braçadeira, Braço, Braçadeira, Corrente Mão, Casamento, Jóias, Acessórios, Romana, Folha, Moda - AliExpress 36.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/F5F5F7/B4B4B8?text=Brazalete+Atenea'" 
+                        alt="Brazalete Serpiente" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Brazalete Atenea</p>
+                        <p class="text-gray-500 text-sm">Plata Ennegrecida | Circones</p>
+                    </div>
+                </div>
+
+                <!-- Item 8: Broche Vintage (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/Sterling Silver Puffy Heart Pendant Necklace, Classic Jewelry - Etsy.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/B4B4B8/1F2937?text=Broche+Art+Deco'" 
+                        alt="Broche Vintage" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Collar de Corazon</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Perlas de Río</p>
+                    </div>
+                </div>
+                
+                <!-- Item 9: Anillo de plata con gema verde (COLOR MODIFICADO) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/anillo verde.png" 
+                        onerror="this.src='https://placehold.co/400x400/B4B4B8/1F2937?text=Anillo+Gema+Verde'" 
+                        alt="Anillo Gema Verde" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Anillo Gema Selva</p>
+                        <p class="text-gray-500 text-sm">Plata 925 | Turmalina</p>
+                    </div>
+                </div>
+
+                <!-- Item 10: Dijes Zodiacales (PLATA) -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden group border border-silver-bright/50">
+                    <img src="imagenes/ultimo.jpg" 
+                        onerror="this.src='https://placehold.co/400x400/0A1C40/F5F5F7?text=Dijes+Zodiacales'" 
+                        alt="Dijes Zodiacales" 
+                        class="w-full h-48 md:h-64 object-cover group-hover:scale-[1.05] transition duration-500 rounded-t-xl cursor-pointer">
+                    <div class="p-4 text-center">
+                        <p class="font-serif text-lg font-medium text-slate-dark">Dijes Zodiacales</p>
+                        <p class="text-gray-500 text-sm">Plata Rodiada | Colección Celestial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== 3. SECCIÓN NOSOTROS ====================================== -->
+        <section id="nosotros" class="py-16 md:py-24 textured-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-5xl md:text-6xl font-serif font-bold text-center mb-6 text-navy-elegant">
+                    Nuestra Esencia
+                </h2>
+                <p class="text-xl text-center text-gray-700 mb-16 max-w-3xl mx-auto">
+                    El arte de la orfebrería se encuentra con la pasión por la calidad y el diseño atemporal.
+                </p>
+
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <!-- Visión Artesanal -->
+                    <div class="lg:w-1/3 bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+                        <i data-lucide="gem" class="icon w-10 h-10 text-navy-elegant mb-4"></i>
+                        <h3 class="text-3xl font-serif font-bold mb-4 text-slate-dark">Visión Artesanal</h3>
+                        <p class="text-gray-600">Creemos en el poder de una joya hecha a mano. Cada pieza de Aurora es una promesa de calidad y un reflejo de dedicación. Utilizamos únicamente Plata 925 y gemas de origen ético para asegurar que tu joya dure por generaciones.</p>
+                    </div>
+
+                    <!-- Compromiso Ético -->
+                    <div class="lg:w-1/3 bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl scale-[1.02] border-t-4 border-navy-elegant">
+                        <i data-lucide="handshake" class="icon w-10 h-10 text-navy-elegant mb-4"></i>
+                        <h3 class="text-3xl font-serif font-bold mb-4 text-slate-dark">Compromiso Ético</h3>
+                        <p class="text-gray-600">Nuestra prioridad es la transparencia. Trabajamos con proveedores responsables para garantizar que todos nuestros materiales son sostenibles y extraídos bajo condiciones justas. Elegir Aurora es elegir el futuro de la joyería consciente.</p>
+                    </div>
+
+                    <!-- Un Legado Brillante -->
+                    <div class="lg:w-1/3 bg-white p-8 rounded-2xl shadow-xl transition duration-300 hover:shadow-2xl">
+                        <i data-lucide="sparkles" class="icon w-10 h-10 text-navy-elegant mb-4"></i>
+                        <h3 class="text-3xl font-serif font-bold mb-4 text-slate-dark">Un Legado Brillante</h3>
+                        <p class="text-gray-600">JK Joyas nació de un sueño de fusionar la tradición del diseño clásico con la modernidad. Desde nuestro inicio, hemos buscado crear piezas que no solo adornen, sino que cuenten una historia personal y única.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================== 4. SECCIÓN CONTACTO ====================================== -->
+        <section id="contacto" class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-5xl md:text-6xl font-serif font-bold text-center mb-6 text-navy-elegant">
+                Hablemos de Joyas
+            </h2>
+            <p class="text-xl text-center text-gray-700 mb-12">
+                ¿Tienes alguna pregunta sobre nuestros diseños o un pedido personalizado? Escríbenos.
+            </p>
+
+            <form id="contactForm" class="bg-white p-8 md:p-12 rounded-2xl shadow-2xl border border-silver-bright/50">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-lg font-medium text-slate-dark mb-2">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required class="form-input-custom w-full px-4 py-3 border rounded-lg focus:outline-none">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg font-medium text-slate-dark mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required class="form-input-custom w-full px-4 py-3 border rounded-lg focus:outline-none">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-lg font-medium text-slate-dark mb-2">Mensaje</label>
+                    <textarea id="message" name="message" rows="5" required class="form-input-custom w-full px-4 py-3 border rounded-lg focus:outline-none"></textarea>
+                </div>
+                
+                <div id="formMessage" class="mb-4 text-center text-lg font-semibold hidden"></div>
+
+                <button type="submit" id="submitButton" class="w-full inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-medium rounded-full text-light-grey-bg bg-navy-elegant hover:bg-silver-bright hover:text-slate-dark transition duration-300 shadow-lg transform hover:scale-[1.01] disabled:opacity-50" disabled>
+                    <i data-lucide="mail" class="icon w-5 h-5 mr-2"></i>
+                    Enviar Mensaje
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="bg-slate-dark text-light-grey-bg mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-3xl font-serif font-bold mb-4">JK Joyas</p>
+            <nav class="space-x-4 mb-6">
+                <a href="#inicio" class="hover:text-silver-bright transition duration-300">Inicio</a>
+                <span class="text-silver-bright">|</span>
+                <a href="#coleccion" class="hover:text-silver-bright transition duration-300">Colección</a>
+                <span class="text-silver-bright">|</span>
+                <a href="#nosotros" class="hover:text-silver-bright transition duration-300">Nosotros</a>
+                <span class="text-silver-bright">|</span>
+                <a href="#contacto" class="hover:text-silver-bright transition duration-300">Contacto</a>
+            </nav>
+            <p class="text-gray-400 text-sm">© 2024 JK. Todos los derechos reservados. Creado con elegancia y pasión.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Lucide Icons (inicialización) -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- FIREBASE Y LÓGICA DE LA APLICACIÓN -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Configuración Global de Firebase (MANDATORIA)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        // Inicializar Firebase
+        let app, db, auth;
+        let userId = null;
+
+        // Establecer nivel de log para depuración de Firestore
+        setLogLevel('Debug');
+
+        /**
+         * Inicializa Firebase, autentica al usuario y habilita el formulario.
+         */
+        async function initFirebase() {
+            try {
+                if (Object.keys(firebaseConfig).length === 0) {
+                    console.error("Firebase Configuration is missing.");
+                    showMessage("Error: Configuración de Firebase faltante. No se puede enviar el mensaje.", 'error');
+                    return;
+                }
+
+                app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                
+                await setPersistence(auth, browserLocalPersistence);
+
+                if (initialAuthToken) {
+                    const userCredential = await signInWithCustomToken(auth, initialAuthToken);
+                    userId = userCredential.user.uid;
+                    console.log("Autenticación exitosa con token personalizado. User ID:", userId);
+                } else {
+                    const userCredential = await signInAnonymously(auth);
+                    userId = userCredential.user.uid;
+                    console.log("Autenticación anónima exitosa. User ID:", userId);
+                }
+
+                // Habilitar el botón de envío solo después de la autenticación
+                document.getElementById('submitButton').disabled = false;
+
+            } catch (error) {
+                console.error("Error en la inicialización o autenticación de Firebase:", error);
+                showMessage(`Error de conexión: ${error.message}.`, 'error');
+            }
+        }
+        
+        // Ejecutar la inicialización
+        initFirebase();
+
+
+        // --- LÓGICA DE FORMULARIO DE CONTACTO ---
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+
+        /**
+         * Muestra un mensaje en el área de mensajes del formulario.
+         * @param {string} message - El mensaje a mostrar.
+         * @param {'success'|'error'|'info'} type - El tipo de mensaje.
+         */
+        function showMessage(message, type) {
+            formMessage.textContent = message;
+            formMessage.classList.remove('hidden', 'text-green-600', 'text-red-600', 'text-blue-600');
+            
+            if (type === 'success') {
+                formMessage.classList.add('text-green-600');
+            } else if (type === 'error') {
+                formMessage.classList.add('text-red-600');
+            } else {
+                 formMessage.classList.add('text-blue-600');
+            }
+        }
+        
+        // Listener de envío de formulario
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            if (!db || !userId) {
+                showMessage("La conexión no está lista. Intenta de nuevo.", 'error');
+                return;
+            }
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const contactData = {
+                name: name,
+                email: email,
+                message: message,
+                timestamp: new Date(),
+                userId: userId // Registrar el ID del usuario que envió el mensaje
+            };
+
+            // Mostrar estado de carga
+            showMessage("Enviando mensaje...", 'info');
+            document.getElementById('submitButton').disabled = true;
+
+            try {
+                // Ruta para colecciones privadas de usuario (Guardar en la colección 'messages' dentro de la carpeta privada del usuario)
+                const messagesCollectionRef = collection(db, `artifacts/${appId}/users/${userId}/messages`);
+                
+                // Usamos addDoc para añadir un nuevo documento con ID autogenerado
+                await addDoc(messagesCollectionRef, contactData);
+
+                showMessage("¡Mensaje enviado con éxito! Te contactaremos pronto.", 'success');
+                contactForm.reset(); // Limpiar el formulario
+
+            } catch (error) {
+                console.error("Error al guardar el mensaje en Firestore:", error);
+                showMessage(`Error al enviar: ${error.message}. Intenta de nuevo.`, 'error');
+            } finally {
+                document.getElementById('submitButton').disabled = false;
+            }
+        });
+
+        // --- LÓGICA DE UI (Menú Móvil) ---
+        const mobileMenuButton = document.querySelector('header button.md\\:hidden');
+        
+        // Crear el menú móvil (overlay) dinámicamente
+        const mobileMenu = document.createElement('nav');
+        mobileMenu.id = 'mobileMenu';
+        mobileMenu.classList.add('fixed', 'inset-0', 'bg-white', 'z-20', 'p-8', 'transition-transform', 'duration-500', 'transform', 'translate-x-full', 'md:hidden', 'flex', 'flex-col', 'items-center', 'justify-center', 'space-y-8', 'shadow-2xl');
+        mobileMenu.innerHTML = `
+            <button id="closeMenuButton" class="absolute top-6 right-6 p-2 text-slate-dark hover:bg-light-grey-bg rounded-lg">
+                <i data-lucide="x" class="icon w-8 h-8"></i>
+            </button>
+            <a href="#inicio" class="text-3xl font-serif font-semibold text-slate-dark hover:text-navy-elegant transition duration-300">Inicio</a>
+            <a href="#coleccion" class="text-3xl font-serif font-semibold text-slate-dark hover:text-navy-elegant transition duration-300">Colección</a>
+            <a href="#nosotros" class="text-3xl font-serif font-semibold text-slate-dark hover:text-navy-elegant transition duration-300">Nosotros</a>
+            <a href="#contacto" class="text-3xl font-serif font-semibold text-slate-dark hover:text-navy-elegant transition duration-300">Contacto</a>
+        `;
+        document.body.appendChild(mobileMenu);
+
+        // Re-inicializar iconos de Lucide para el menú móvil
+        lucide.createIcons();
+        
+        // Toggle del menú
+        function toggleMobileMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('translate-x-full');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+            }
+        }
+
+        mobileMenuButton.addEventListener('click', () => toggleMobileMenu(true));
+        document.getElementById('closeMenuButton').addEventListener('click', () => toggleMobileMenu(false));
+        
+        // Cerrar el menú al hacer clic en un enlace de anclaje dentro del menú
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Pequeño retraso para que el desplazamiento comience antes de cerrar el menú
+                setTimeout(() => toggleMobileMenu(false), 300); 
+            });
+        });
+        
+    </script>
+</body>
+</html>
